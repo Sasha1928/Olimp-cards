@@ -1,11 +1,8 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Fight : MonoBehaviour
 {
-    public event UnityAction DeadEnemy;
-
     [SerializeField] private Enemy _enemy;
     [SerializeField] private Player _player;
 
