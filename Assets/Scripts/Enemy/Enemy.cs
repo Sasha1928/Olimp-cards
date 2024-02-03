@@ -1,24 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private float _healf;
-    [SerializeField] private float _damage;
-    [SerializeField] private float _damageCrit;
+    public event UnityAction DeadEnemy;
 
-    public float Damage => _damage;
-    public float DamageCrit => _damageCrit;
+    [SerializeField] private EnemyObjectSO _enemyObjectSO;
 
-    public event UnityAction Dead;
-    private void GetDamage(float damage)
+    private int _helth;
+
+    private void Awake()
     {
-        _healf -= damage;
-        if (_healf <= 0)
+        _helth = _enemyObjectSO.Helth;
+    }
+
+    public EnemyObjectSO GetEnemyObjectSO()
+    {
+        return _enemyObjectSO;
+    }
+
+    public void GetDamage(int damage)
+    {
+        _helth -= damage;
+
+        if (_helth <= 0)
         {
-            Dead.Invoke();
+            // DeadEnemy?.Invoke();
+            gameObject.SetActive(false);
         }
     }
 }

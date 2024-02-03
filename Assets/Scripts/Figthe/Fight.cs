@@ -1,13 +1,65 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Fight : MonoBehaviour
 {
-    [SerializeField] private Enemy enemy;
+    public event UnityAction DeadEnemy;
+
+    [SerializeField] private Enemy _enemy;
+    [SerializeField] private Player _player;
+
+    private int currentPlayerIndex;
 
     private void Awake()
     {
-        //знайти плеєра по тегу
+        currentPlayerIndex = 1;
+    }
+
+    private void Update()
+    {
+        StartCoroutine(AnimatorDelay());
+    }
+
+    private IEnumerator AnimatorDelay()
+    {
+        if (currentPlayerIndex == 1)
+        {
+         //   _playerCard.animator.Atactk();
+            yield return new WaitForSeconds(1);
+          //  _enemy.animator.Damage();
+        }
+        else
+        {
+          //  _oponnentCard.animator.Atactk();
+            yield return new WaitForSeconds(1);
+          //  _player.animator.Damage();
+        }
+        yield return new WaitForSeconds(1);
+
+        TakeDamagePerson();
+        NextXid();
+    }
+
+    private void NextXid()
+    {
+        if (currentPlayerIndex == 1)
+        {
+            currentPlayerIndex = 0;
+        }
+        else 
+            currentPlayerIndex = 1;
+    }
+
+    private void TakeDamagePerson()
+    {
+        if (currentPlayerIndex == 1)
+        {
+            _enemy.GetDamage(_player.GetPlayerObjectSO().Damage);
+        }
+        else
+        {
+            _player.GetDamage(_enemy.GetEnemyObjectSO().Damage);
+        }
     }
 }
