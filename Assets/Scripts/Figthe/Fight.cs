@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Fight : MonoBehaviour
@@ -7,6 +8,7 @@ public class Fight : MonoBehaviour
     [SerializeField] private Enemy _enemy;
     [SerializeField] private Player _player;
     [SerializeField] private Animator _theEndImage;
+    [SerializeField] private TMP_Text _textViner;
 
     private int currentPlayerIndex;
     private Animator _playerAnimator;
@@ -15,13 +17,13 @@ public class Fight : MonoBehaviour
 
     private void OnEnable()
     {
-        _player.DeadPlayer += StopCorotine;
-        _enemy.DeadEnemy += StopCorotine;
+        _player.DeadPlayer += StopFight;
+        _enemy.DeadEnemy += StopFight;
     }
     private void OnDisable()
     {
-        _player.DeadPlayer -= StopCorotine;
-        _enemy.DeadEnemy -= StopCorotine;
+        _player.DeadPlayer -= StopFight;
+        _enemy.DeadEnemy -= StopFight;
         
     }
 
@@ -60,9 +62,15 @@ public class Fight : MonoBehaviour
             StartCoroutine(AnimatorDelay());
     }
 
-    private void StopCorotine()
+    private void StopFight(bool Viner)
     {
         _coroutine = false;
         _theEndImage.SetTrigger("TheEnd");
+        if (Viner)
+        {
+            _textViner.text = "Viner";
+        }
+        else
+            _textViner.text = "Loss";
     }
 }

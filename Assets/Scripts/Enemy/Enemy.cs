@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
-    public event UnityAction DeadEnemy;
+    public event UnityAction<bool> DeadEnemy;
 
     [SerializeField] private EnemyObjectSO _enemyObjectSO;
 
@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
 
         if (_helth <= 0)
         {
-            DeadEnemy?.Invoke();
+            DeadEnemy?.Invoke(true);
             gameObject.SetActive(false);
         }
     }

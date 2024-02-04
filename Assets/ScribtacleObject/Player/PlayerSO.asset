@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectName: Player
   Prefab: {fileID: 5168412025217975750, guid: fdf5e2da7d08fcb40968b32b8a99f7db, type: 3}
-  Helth: 100
+  Helth: 31
   Armor: 5
   CritDamage: 10
   Damage: 10
