@@ -6,11 +6,24 @@ public class Fight : MonoBehaviour
 {
     [SerializeField] private Enemy _enemy;
     [SerializeField] private Player _player;
+    [SerializeField] private Animator _theEndImage;
 
     private int currentPlayerIndex;
     private Animator _playerAnimator;
     private Animator _enemyAnimator;
     private bool _coroutine = true;
+
+    private void OnEnable()
+    {
+        _player.DeadPlayer += StopCorotine;
+        _enemy.DeadEnemy += StopCorotine;
+    }
+    private void OnDisable()
+    {
+        _player.DeadPlayer -= StopCorotine;
+        _enemy.DeadEnemy -= StopCorotine;
+        
+    }
 
     private void Awake()
     {
@@ -45,5 +58,11 @@ public class Fight : MonoBehaviour
         }
         if (_coroutine)
             StartCoroutine(AnimatorDelay());
+    }
+
+    private void StopCorotine()
+    {
+        _coroutine = false;
+        _theEndImage.SetTrigger("TheEnd");
     }
 }

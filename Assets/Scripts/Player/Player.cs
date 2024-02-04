@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
 
         if ( _helth <= 0)
         {
-         //   DeadPlayer?.Invoke();
+           DeadPlayer?.Invoke();
            gameObject.SetActive(false);
         }
     }

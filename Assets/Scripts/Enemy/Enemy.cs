@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
 
         if (_helth <= 0)
         {
-            // DeadEnemy?.Invoke();
+            DeadEnemy?.Invoke();
             gameObject.SetActive(false);
         }
     }

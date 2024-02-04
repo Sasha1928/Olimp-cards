@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Figth");
     }
     public void SetingOpen(GameObject settingMenu)
     {
@@ -24,5 +24,13 @@ public class MainMenu : MonoBehaviour
     {
         _buttons.SetActive(true);
         settingMenu.SetActive(false);
+    }
+    public void OpenMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void OpenShop() 
+    {
+        SceneManager.LoadScene("Shop");
     }
 }
