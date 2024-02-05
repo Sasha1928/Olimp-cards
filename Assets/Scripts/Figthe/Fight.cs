@@ -68,7 +68,7 @@ public class Fight : MonoBehaviour
         _theEndImage.SetTrigger("TheEnd");
         if (Viner)
         {
-            _textViner.text = "Viner";
+            _textViner.text = "Victory";
         }
         else
             _textViner.text = "Loss";
