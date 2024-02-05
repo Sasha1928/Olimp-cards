@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df3244411922f1a41b63e10c95b3c574, type: 3}
-  m_Name: KratosSO
+  m_Name: Germes
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 21300000, guid: 8d1e2b5eb8a12794cb5b30e2566dc72f, type: 3}
-  ObjectName: Kratos
+  _sprite: {fileID: 21300000, guid: b8acd6d5afa43c64289344466869773b, type: 3}
+  ObjectName: Germes
   Prefab: {fileID: 5168412025217975750, guid: 05353ec95a3c9ec43ae54fa06c579340, type: 3}
   Helth: 100
   Armor: 5
   CritDamage: 10
   Damage: 2
-  NomberLevel: 7
+  NomberLevel: 2

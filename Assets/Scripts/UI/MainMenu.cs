@@ -33,4 +33,8 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Shop");
     }
+    public void OpenLevelMenu()
+    {
+        SceneManager.LoadScene("Levels");
+    }
 }
