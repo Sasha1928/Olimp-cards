@@ -22,8 +22,7 @@ public class Fight : MonoBehaviour
     private void OnDisable()
     {
         _player.DeadPlayer -= StopFight;
-        _enemy.DeadEnemy -= StopFight;
-        
+        _enemy.DeadEnemy -= StopFight;       
     }
 
     private void Awake()
@@ -45,7 +44,7 @@ public class Fight : MonoBehaviour
         {
             _playerAnimator.SetTrigger("Attack");
             yield return new WaitForSeconds(0.17f);
-            _enemy.GetDamage(_player.GetPlayerObjectSO().Damage);
+            _enemy.GetDamage(_player.GetPlayerObjectSO().Damage, _player.GetPlayerObjectSO().Armor, _player.GetPlayerObjectSO().CritDamage);
             currentPlayerIndex = 0;
             _enemyAnimator.SetTrigger("Block");
         }
@@ -53,7 +52,7 @@ public class Fight : MonoBehaviour
         {
             _enemyAnimator.SetTrigger("Attack");
             yield return new WaitForSeconds(0.17f);
-            _player.GetDamage(_enemy.GetEnemyObjectSO().Damage);
+            _player.GetDamage(_enemy.GetEnemyObjectSO().Damage, _enemy.GetEnemyObjectSO().Armor, _enemy.GetEnemyObjectSO().CritDamage);
             currentPlayerIndex = 1;
             _playerAnimator.SetTrigger("Block");
         }
@@ -68,8 +67,7 @@ public class Fight : MonoBehaviour
         if (Viner)
         {
             _textViner.text = "Victory";
-            AddMoney(_enemy.GetEnemyObjectSO().Money);
-            
+            AddMoney(_enemy.GetEnemyObjectSO().Money);         
         }
         else
             _textViner.text = "Loss";

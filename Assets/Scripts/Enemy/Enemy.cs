@@ -28,9 +28,16 @@ public class Enemy : MonoBehaviour
         return _gameManagerSO.EnemyObject;
     }
 
-    public void GetDamage(int damage)
+    public void GetDamage(int damage, int armor, int critDamage)
     {
-        _helth -= damage;
+        // Визначити кінцевий збиток, враховуючи захист
+        int finalDamage = Mathf.Max(0, damage - armor);
+
+        // Визначити, чи відбудеться критичний удар
+        bool isCritHit = Random.Range(0, 100) < critDamage;
+
+        // Застосувати збиток
+        _helth -= isCritHit ? finalDamage * 2 : finalDamage;
 
         if (_helth <= 0)
         {
