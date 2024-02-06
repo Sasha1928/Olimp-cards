@@ -6,7 +6,7 @@ public class ManagerButton : MonoBehaviour
 {
     [SerializeField] private EnemyObjectSO _playerObjectSO;
     [SerializeField] private ShopManagerSO _shopManagerSO;
-    [SerializeField] private EnemyObjectSO _shopObjectSO;
+    [SerializeField] private ShopObjectSO _shopObjectSO;
     [SerializeField] private Button[] _buttonsList;
     [SerializeField] private TMP_Text[] _buyTexts;
     [SerializeField] private TMP_Text[] _levelUpTexts;
