@@ -5,12 +5,10 @@ public class CharacterStatsManager : MonoBehaviour
 {
     public static CharacterStatsManager Instance { get; private set; }
 
-    [SerializeField] private GameManegerSO _characterStatsSO;
-    [SerializeField] private ShopManagerSO _shopManagerSO;
+    public DataSave DataSave;
 
     private void Awake()
     {
-        MainMenu.Instance.OnSceneLoaded += Instance_OnSceneLoaded;
         // Робимо перевірку на наявність іншої копії класу
         if (Instance == null)
         {
@@ -23,9 +21,10 @@ public class CharacterStatsManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    
     private void Instance_OnSceneLoaded()
     {
+        MainMenu.Instance.OnSceneLoaded += Instance_OnSceneLoaded;
         SaveData();
     }
 
@@ -36,24 +35,24 @@ public class CharacterStatsManager : MonoBehaviour
 
     private void SaveData()
     {
-        string json = JsonUtility.ToJson(Instance);
-        PlayerPrefs.SetString("CharacterStatsManager", json);
+        string json = JsonUtility.ToJson(DataSave);
+        PlayerPrefs.SetString(" DataSave", json);
         PlayerPrefs.Save();
     }
 
     private void LoadData()
     {
-        string json = JsonUtility.ToJson(Instance);
-        PlayerPrefs.SetString("CharacterStatsManager", "");
+        string json = JsonUtility.ToJson(DataSave);
+        PlayerPrefs.SetString(" DataSave", "");
 
         if (!string.IsNullOrEmpty(json))
         {
-            Instance = JsonUtility.FromJson<CharacterStatsManager>(json);
+            DataSave = JsonUtility.FromJson<DataSave>(json);
         }
         else
         {
             // Якщо немає збережених даних, створюємо новий об'єкт гри
-            Instance = new CharacterStatsManager();
+            DataSave = new DataSave();
         }
 
     }
