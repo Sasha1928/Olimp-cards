@@ -2444,7 +2444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0117b85b62a1890429b29890530539d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerObjectSO: {fileID: 11400000, guid: c0bb16bf1e5ee6c48889a7a65763509f, type: 2}
+  _playerObjectSO: {fileID: 11400000, guid: afcdcc515682397498dd739086ca2b79, type: 2}
   _shopManagerSO: {fileID: 11400000, guid: 3d7cbfaa49ccd344584257ec682e6873, type: 2}
   _shopObjectSO: {fileID: 11400000, guid: dfbbf8535d5836b4eaf52d2e2c291aed, type: 2}
   _buttonsList:

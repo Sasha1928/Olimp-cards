@@ -1763,7 +1763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b201277e2c71f34190c84e880931583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerObjectSO: {fileID: 11400000, guid: c0bb16bf1e5ee6c48889a7a65763509f, type: 2}
+  _playerObjectSO: {fileID: 11400000, guid: afcdcc515682397498dd739086ca2b79, type: 2}
 --- !u!224 &2012007191 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1639405790897254369, guid: 0cf387ab799ff4440b21c1cb85a48c89, type: 3}
