@@ -11,4 +11,5 @@ public class EnemyObjectSO : ScriptableObject
     public int CritDamage;
     public int Damage;
     public int NomberLevel;
+    public int Money;
 }

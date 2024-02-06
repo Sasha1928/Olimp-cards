@@ -895,13 +895,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1151716834}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1151716837}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: OpenLevelMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2271,6 +2271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerObjectSO: {fileID: 11400000, guid: c0bb16bf1e5ee6c48889a7a65763509f, type: 2}
+  _shopManagerSO: {fileID: 11400000, guid: 3d7cbfaa49ccd344584257ec682e6873, type: 2}
   _shopObjectSO: {fileID: 11400000, guid: ce4809db28face24bbdcdc3c739bb4a3, type: 2}
   _buttonsList:
   - {fileID: 714805423}
@@ -2299,7 +2300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9b52880bf52984c9f2d8d88d710b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _buttons: {fileID: 0}
+  _buttons: {fileID: 884311034}
 --- !u!1 &1268037764
 GameObject:
   m_ObjectHideFlags: 0
@@ -2335,7 +2336,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 28.15, y: -120.4}
+  m_AnchoredPosition: {x: 28.149994, y: -120.40001}
   m_SizeDelta: {x: -158.26, y: -340.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1268037766
@@ -2894,7 +2895,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 26.553, y: -123.87}
+  m_AnchoredPosition: {x: 26.552994, y: -123.87001}
   m_SizeDelta: {x: -156.35, y: -333.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1721800690

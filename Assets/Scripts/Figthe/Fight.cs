@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -72,5 +71,10 @@ public class Fight : MonoBehaviour
         }
         else
             _textViner.text = "Loss";
+    }
+
+    private void AddMoney()
+    {
+
     }
 }
