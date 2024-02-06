@@ -14,6 +14,7 @@ public class AllocationlStatsCharacter : MonoBehaviour
     private void Start()
     {
         _image.sprite = _character._sprite;
+        _hp.text = _character.Helth.ToString();
         _armor.text = _character.Armor.ToString();
         _damage.text = _character.Damage.ToString();
         _crit.text = _character.CritDamage.ToString();

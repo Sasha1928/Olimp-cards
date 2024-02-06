@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1957059628, guid: 337c1b85f0acdd54782da2bbd8c7f22f, type: 3}
+  m_Sprite: {fileID: 1827142176, guid: 337c1b85f0acdd54782da2bbd8c7f22f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -90,7 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f706a6a7aa9d53468f5496dfeeeb29d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyObjectSO: {fileID: 11400000, guid: 81679fd742467594ca8279654bd923dd, type: 2}
+  _image: {fileID: 0}
+  _gameManagerSO: {fileID: 0}
 --- !u!1 &3996227196746503557
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,7 +127,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.30000004, y: 1.5974811}
+  m_AnchoredPosition: {x: -0.000012249, y: 13}
   m_SizeDelta: {x: 306.2, y: 293.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &11095867850900391

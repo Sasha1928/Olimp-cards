@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -8,12 +9,17 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private Image _image;
     [SerializeField] private GameManegerSO _gameManagerSO;
+    [SerializeField] private TMP_Text _hp, _armor, _damage, _crit;
 
     private int _helth;
 
     private void Awake()
     {
         _image.sprite = _gameManagerSO.EnemyObject._sprite;
+        _hp.text = _gameManagerSO.EnemyObject.Helth.ToString();
+        _armor.text = _gameManagerSO.EnemyObject.Armor.ToString();
+        _damage.text = _gameManagerSO.EnemyObject.Damage.ToString();
+        _crit.text = _gameManagerSO.EnemyObject.CritDamage.ToString();
         _helth = _gameManagerSO.EnemyObject.Helth;
     }
 

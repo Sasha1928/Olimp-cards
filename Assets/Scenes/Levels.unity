@@ -6283,6 +6283,7 @@ GameObject:
   - component: {fileID: 1654015339}
   - component: {fileID: 1654015340}
   - component: {fileID: 1654015341}
+  - component: {fileID: 1654015342}
   m_Layer: 0
   m_Name: Maneger
   m_TagString: Untagged
@@ -6340,6 +6341,21 @@ MonoBehaviour:
   - {fileID: 1179993589}
   - {fileID: 892254039}
   - {fileID: 1705905140}
+--- !u!114 &1654015342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654015338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184e6493457c5374db9978745f01e6a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _manegerSO: {fileID: 11400000, guid: afcdcc515682397498dd739086ca2b79, type: 2}
+  _learnCanvas: {fileID: 802678321}
+  _levelCanvas: {fileID: 1660925609}
 --- !u!1 &1660925609
 GameObject:
   m_ObjectHideFlags: 0
