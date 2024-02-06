@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering;
 using UnityEngine.UI;
 
 public class ManagerButton : MonoBehaviour
@@ -26,10 +27,15 @@ public class ManagerButton : MonoBehaviour
 
     private void LevelUp(ref int getValue, int setValue, ref TMP_Text texts, ref TMP_Text textLevelUp)
     {
-        getValue += setValue;
-        BuyText(ref texts);
-        LevelUpText(ref textLevelUp);
-        SaveParametersShop(texts, textLevelUp);
+
+        if (GetMoney(int.Parse(texts.text), ref _playerObjectSO.Money))
+        {
+            getValue += setValue;
+
+            BuyText(ref texts);
+            LevelUpText(ref textLevelUp);
+            SaveParametersShop(texts, textLevelUp);
+        }
     }
 
     private void BuyText(ref TMP_Text textsBuy)
@@ -88,5 +94,15 @@ public class ManagerButton : MonoBehaviour
             _buyTexts[i].text = _shopManagerSO.SaveStatsBuys[i].ToString();
             _levelUpTexts[i].text = $"{_shopManagerSO.SaveStats[i]}/10";
         }
+    }
+
+    private bool GetMoney(int money, ref int playerMoney)
+    {
+        if (playerMoney >= money)
+        {
+            playerMoney -= money;
+            return true;
+        }
+        return false;
     }
 }

@@ -68,13 +68,15 @@ public class Fight : MonoBehaviour
         if (Viner)
         {
             _textViner.text = "Victory";
+            AddMoney(_enemy.GetEnemyObjectSO().Money);
+            
         }
         else
             _textViner.text = "Loss";
     }
 
-    private void AddMoney()
+    private void AddMoney(int money)
     {
-
+        _player.GetPlayerObjectSO().Money += money;
     }
 }
