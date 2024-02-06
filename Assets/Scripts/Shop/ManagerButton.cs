@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class ManagerButton : MonoBehaviour
 {
-    [SerializeField] private EnemyObjectSO _playerObjectSO;
+    [SerializeField] private GameManegerSO _playerObjectSO;
     [SerializeField] private ShopManagerSO _shopManagerSO;
     [SerializeField] private ShopObjectSO _shopObjectSO;
     [SerializeField] private Button[] _buttonsList;
@@ -14,12 +14,12 @@ public class ManagerButton : MonoBehaviour
 
     private void Awake()
     {
-        _buttonsList[0].onClick.AddListener(() => LevelUp(ref _playerObjectSO.Helth, _shopObjectSO.Helth, ref _buyTexts[0], ref _levelUpTexts[0]));
-        _buttonsList[1].onClick.AddListener(() => LevelUp(ref _playerObjectSO.Damage, _shopObjectSO.Damage, ref _buyTexts[1], ref _levelUpTexts[1]));
-        _buttonsList[2].onClick.AddListener(() => LevelUp(ref _playerObjectSO.CritDamage, _shopObjectSO.CritDamage, ref _buyTexts[2], ref _levelUpTexts[2]));
-        _buttonsList[3].onClick.AddListener(() => LevelUp(ref _playerObjectSO.Armor, _shopObjectSO.Armor, ref _buyTexts[3], ref _levelUpTexts[3]));
+        _buttonsList[0].onClick.AddListener(() => LevelUp(ref _playerObjectSO.PlyerObject.Helth, _shopObjectSO.Helth, ref _buyTexts[0], ref _levelUpTexts[0]));
+        _buttonsList[1].onClick.AddListener(() => LevelUp(ref _playerObjectSO.PlyerObject.Damage, _shopObjectSO.Damage, ref _buyTexts[1], ref _levelUpTexts[1]));
+        _buttonsList[2].onClick.AddListener(() => LevelUp(ref _playerObjectSO.PlyerObject.CritDamage, _shopObjectSO.CritDamage, ref _buyTexts[2], ref _levelUpTexts[2]));
+        _buttonsList[3].onClick.AddListener(() => LevelUp(ref _playerObjectSO.PlyerObject.Armor, _shopObjectSO.Armor, ref _buyTexts[3], ref _levelUpTexts[3]));
 
-        _shopMoney.text = _playerObjectSO.Money.ToString();
+        _shopMoney.text = _playerObjectSO.PlyerObject.Money.ToString();
     }
 
     private void Start()
@@ -30,7 +30,7 @@ public class ManagerButton : MonoBehaviour
     private void LevelUp(ref int getValue, int setValue, ref TMP_Text texts, ref TMP_Text textLevelUp)
     {
 
-        if (GetMoney(int.Parse(texts.text), ref _playerObjectSO.Money))
+        if (GetMoney(int.Parse(texts.text), ref _playerObjectSO.PlyerObject.Money))
         {
             getValue += setValue;
 

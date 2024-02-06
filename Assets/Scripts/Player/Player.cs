@@ -5,18 +5,18 @@ public class Player : MonoBehaviour
 {
     public event UnityAction<bool> DeadPlayer;
 
-    [SerializeField] private EnemyObjectSO _playerObjectSO;
+    [SerializeField] private GameManegerSO _playerObjectSO;
 
     private int _helth;
 
     private void Awake()
     {
-        _helth = _playerObjectSO.Helth;
+        _helth = _playerObjectSO.PlyerObject.Helth;
     }
 
     public EnemyObjectSO GetPlayerObjectSO()
     {
-        return _playerObjectSO;
+        return _playerObjectSO.PlyerObject;
     }
 
     public void GetDamage(int damage)

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df3244411922f1a41b63e10c95b3c574, type: 3}
-  m_Name: PlayerSO
+  m_Name: Akanta
   m_EditorClassIdentifier: 
-  _sprite: {fileID: 0}
-  ObjectName: Player
+  _sprite: {fileID: 21300000, guid: 9e70a5a7d0f4c3c458c3484cb33b6f8d, type: 3}
+  ObjectName: Akanta
   Prefab: {fileID: 5168412025217975750, guid: fdf5e2da7d08fcb40968b32b8a99f7db, type: 3}
   Helth: 101
   Armor: 90
