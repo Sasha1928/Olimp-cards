@@ -1969,7 +1969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7260f30403c88247bc9657722135db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameManeger: {fileID: 0}
+  _gameManeger: {fileID: 11400000, guid: afcdcc515682397498dd739086ca2b79, type: 2}
   _character: {fileID: 11400000, guid: 99419c41a2eb1f1468f84203359a13d4, type: 2}
   _image: {fileID: 101771373}
   _hp: {fileID: 1558040812}
@@ -2061,6 +2061,18 @@ MonoBehaviour:
       - m_Target: {fileID: 617873252}
         m_TargetAssemblyTypeName: AllocationlStatsCharacter, Assembly-CSharp
         m_MethodName: AllocationCharacter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1654015340}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2203,7 +2215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7260f30403c88247bc9657722135db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameManeger: {fileID: 0}
+  _gameManeger: {fileID: 11400000, guid: afcdcc515682397498dd739086ca2b79, type: 2}
   _character: {fileID: 11400000, guid: c0bb16bf1e5ee6c48889a7a65763509f, type: 2}
   _image: {fileID: 1917936985}
   _hp: {fileID: 1270116542}
@@ -2295,6 +2307,18 @@ MonoBehaviour:
       - m_Target: {fileID: 661107736}
         m_TargetAssemblyTypeName: AllocationlStatsCharacter, Assembly-CSharp
         m_MethodName: AllocationCharacter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1654015340}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5730,7 +5754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7260f30403c88247bc9657722135db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameManeger: {fileID: 0}
+  _gameManeger: {fileID: 11400000, guid: afcdcc515682397498dd739086ca2b79, type: 2}
   _character: {fileID: 11400000, guid: cc8e5b050a61dd94eb2cfb517b5b8014, type: 2}
   _image: {fileID: 1481948183}
   _hp: {fileID: 129377521}
@@ -5822,6 +5846,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1520227285}
         m_TargetAssemblyTypeName: AllocationlStatsCharacter, Assembly-CSharp
         m_MethodName: AllocationCharacter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1654015340}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
