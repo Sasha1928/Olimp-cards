@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd3a12a0febfcb44beb2f173d791293, type: 3}
   m_Name: ShopManagerSO
   m_EditorClassIdentifier: 
-  SaveStats: 0a0000000a0000000a0000000a000000
-  SaveStatsBuys: 64000000640000006400000064000000
+  SaveStats: 01000000010000000100000003000000
+  SaveStatsBuys: 0a0000000a0000000a0000001e000000

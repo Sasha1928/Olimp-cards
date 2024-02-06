@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering;
 using UnityEngine.UI;
 
 public class ManagerButton : MonoBehaviour
@@ -11,6 +10,7 @@ public class ManagerButton : MonoBehaviour
     [SerializeField] private Button[] _buttonsList;
     [SerializeField] private TMP_Text[] _buyTexts;
     [SerializeField] private TMP_Text[] _levelUpTexts;
+    [SerializeField] private TMP_Text _shopMoney;
 
     private void Awake()
     {
@@ -18,6 +18,8 @@ public class ManagerButton : MonoBehaviour
         _buttonsList[1].onClick.AddListener(() => LevelUp(ref _playerObjectSO.Damage, _shopObjectSO.Damage, ref _buyTexts[1], ref _levelUpTexts[1]));
         _buttonsList[2].onClick.AddListener(() => LevelUp(ref _playerObjectSO.CritDamage, _shopObjectSO.CritDamage, ref _buyTexts[2], ref _levelUpTexts[2]));
         _buttonsList[3].onClick.AddListener(() => LevelUp(ref _playerObjectSO.Armor, _shopObjectSO.Armor, ref _buyTexts[3], ref _levelUpTexts[3]));
+
+        _shopMoney.text = _playerObjectSO.Money.ToString();
     }
 
     private void Start()
@@ -101,6 +103,8 @@ public class ManagerButton : MonoBehaviour
         if (playerMoney >= money)
         {
             playerMoney -= money;
+            _shopMoney.text = playerMoney.ToString();
+
             return true;
         }
         return false;

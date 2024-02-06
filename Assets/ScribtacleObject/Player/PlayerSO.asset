@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df3244411922f1a41b63e10c95b3c574, type: 3}
   m_Name: PlayerSO
   m_EditorClassIdentifier: 
+  _sprite: {fileID: 0}
   ObjectName: Player
   Prefab: {fileID: 5168412025217975750, guid: fdf5e2da7d08fcb40968b32b8a99f7db, type: 3}
-  Helth: 31
-  Armor: 5
-  CritDamage: 10
-  Damage: 10
+  Helth: 101
+  Armor: 90
+  CritDamage: 32
+  Damage: 85
+  NomberLevel: 0
+  Money: 0
