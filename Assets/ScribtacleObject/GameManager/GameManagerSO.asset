@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad65ae5f9fbe55428ed12c45653552c, type: 3}
   m_Name: GameManagerSO
   m_EditorClassIdentifier: 
-  LevelComplite: 1
-  CurrentLevel: 0
+  LevelComplite: 4
   VolumeMusic: 0
   VolumeSound: 0
+  EnemyObject: {fileID: 11400000, guid: f0875453a7755e240aee9f72d6a8a9ed, type: 2}
