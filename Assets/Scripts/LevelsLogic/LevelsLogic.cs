@@ -8,9 +8,9 @@ public class LevelsLogic : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < _gameManager.LevelComplite; i++)
+        for (int i = 0; i <= _gameManager.LevelComplite; i++)
         {
-            _buttons[i].interactable = true;
+                _buttons[i].interactable = true;
         }
     }
 

@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
 
         if (_helth <= 0)
         {
-            if (_gameManagerSO.LevelComplite == _gameManagerSO.EnemyObject.NomberLevel)
+            if (_gameManagerSO.LevelComplite == _gameManagerSO.EnemyObject.NomberLevel - 1)
                 _gameManagerSO.LevelComplite++;
 
             DeadEnemy?.Invoke(true);

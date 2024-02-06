@@ -9,7 +9,7 @@ public class AllocationlStatsCharacter : MonoBehaviour
     [SerializeField] private Image _image;
     [SerializeField] private TMP_Text _hp,_armor,_damage,_crit;
 
-    private void Start()
+    private void Awake()
     {
         _image.sprite = _character._sprite;
         _hp.text = _character.Helth.ToString();

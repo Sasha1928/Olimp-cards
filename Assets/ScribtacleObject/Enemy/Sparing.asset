@@ -17,7 +17,7 @@ MonoBehaviour:
   Prefab: {fileID: 5168412025217975750, guid: 05353ec95a3c9ec43ae54fa06c579340, type: 3}
   Helth: 100
   Armor: 5
-  CritDamage: 10
+  CritDamage: 2
   Damage: 2
   NomberLevel: 10
   Money: 10

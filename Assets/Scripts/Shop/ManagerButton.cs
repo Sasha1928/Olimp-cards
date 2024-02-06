@@ -12,6 +12,8 @@ public class ManagerButton : MonoBehaviour
     [SerializeField] private TMP_Text[] _levelUpTexts;
     [SerializeField] private TMP_Text _shopMoney;
 
+    private AllocationlStats _stats;
+
     private void Awake()
     {
         _buttonsList[0].onClick.AddListener(() => LevelUp(ref _playerObjectSO.PlyerObject.Helth, _shopObjectSO.Helth, ref _buyTexts[0], ref _levelUpTexts[0]));
@@ -20,6 +22,7 @@ public class ManagerButton : MonoBehaviour
         _buttonsList[3].onClick.AddListener(() => LevelUp(ref _playerObjectSO.PlyerObject.Armor, _shopObjectSO.Armor, ref _buyTexts[3], ref _levelUpTexts[3]));
 
         _shopMoney.text = _playerObjectSO.PlyerObject.Money.ToString();
+        _stats = GetComponent<AllocationlStats>();
     }
 
     private void Start()
@@ -37,6 +40,7 @@ public class ManagerButton : MonoBehaviour
             BuyText(ref texts);
             LevelUpText(ref textLevelUp);
             SaveParametersShop(texts, textLevelUp);
+            _stats.Allocation();
         }
     }
 

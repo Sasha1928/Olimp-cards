@@ -15,9 +15,9 @@ MonoBehaviour:
   _sprite: {fileID: 21300000, guid: cdf9cd71fbcb7d348947717be5d4ec0a, type: 3}
   ObjectName: Apolon
   Prefab: {fileID: 5168412025217975750, guid: 05353ec95a3c9ec43ae54fa06c579340, type: 3}
-  Helth: 100
-  Armor: 5
-  CritDamage: 10
-  Damage: 2
+  Helth: 170
+  Armor: 13
+  CritDamage: 14
+  Damage: 27
   NomberLevel: 5
-  Money: 10
+  Money: 50
