@@ -15,9 +15,9 @@ MonoBehaviour:
   _sprite: {fileID: 21300000, guid: b8acd6d5afa43c64289344466869773b, type: 3}
   ObjectName: Germes
   Prefab: {fileID: 5168412025217975750, guid: 05353ec95a3c9ec43ae54fa06c579340, type: 3}
-  Helth: 100
+  Helth: 120
   Armor: 5
-  CritDamage: 10
-  Damage: 2
+  CritDamage: 7
+  Damage: 16
   NomberLevel: 2
-  Money: 50
+  Money: 20

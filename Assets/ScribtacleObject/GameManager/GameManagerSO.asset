@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad65ae5f9fbe55428ed12c45653552c, type: 3}
   m_Name: GameManagerSO
   m_EditorClassIdentifier: 
-  FirstStart: 1
-  LevelComplite: 6
+  FirstStart: 0
+  LevelComplite: 1
   VolumeMusic: 0
   VolumeSound: 0
-  EnemyObject: {fileID: 11400000, guid: 28f1a87f72996234bbba60aea042c82f, type: 2}
-  PlyerObject: {fileID: 11400000, guid: cc8e5b050a61dd94eb2cfb517b5b8014, type: 2}
+  EnemyObject: {fileID: 11400000, guid: 0770b7c1d852ecf498004efdd5888dfd, type: 2}
+  PlyerObject: {fileID: 11400000, guid: c0bb16bf1e5ee6c48889a7a65763509f, type: 2}

@@ -15,9 +15,9 @@ MonoBehaviour:
   _sprite: {fileID: 21300000, guid: a2e5e3f2efb53434dac670ff5d2768a5, type: 3}
   ObjectName: Afina
   Prefab: {fileID: 5168412025217975750, guid: 05353ec95a3c9ec43ae54fa06c579340, type: 3}
-  Helth: 100
-  Armor: 5
+  Helth: 150
+  Armor: 8
   CritDamage: 10
-  Damage: 2
+  Damage: 17
   NomberLevel: 3
-  Money: 10
+  Money: 30

@@ -15,9 +15,9 @@ MonoBehaviour:
   _sprite: {fileID: 21300000, guid: 9e70a5a7d0f4c3c458c3484cb33b6f8d, type: 3}
   ObjectName: Akanta
   Prefab: {fileID: 5168412025217975750, guid: fdf5e2da7d08fcb40968b32b8a99f7db, type: 3}
-  Helth: 101
-  Armor: 90
-  CritDamage: 32
-  Damage: 85
+  Helth: 120
+  Armor: 7
+  CritDamage: 5
+  Damage: 15
   NomberLevel: 0
-  Money: 0
+  Money: 20

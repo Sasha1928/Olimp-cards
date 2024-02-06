@@ -16,7 +16,7 @@ MonoBehaviour:
   ObjectName: Ariadna
   Prefab: {fileID: 5168412025217975750, guid: fdf5e2da7d08fcb40968b32b8a99f7db, type: 3}
   Helth: 101
-  Armor: 90
+  Armor: 5
   CritDamage: 32
   Damage: 85
   NomberLevel: 0

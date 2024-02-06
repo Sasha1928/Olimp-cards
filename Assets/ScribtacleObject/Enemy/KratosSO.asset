@@ -15,9 +15,9 @@ MonoBehaviour:
   _sprite: {fileID: 21300000, guid: 8d1e2b5eb8a12794cb5b30e2566dc72f, type: 3}
   ObjectName: Kratos
   Prefab: {fileID: 5168412025217975750, guid: 05353ec95a3c9ec43ae54fa06c579340, type: 3}
-  Helth: 100
+  Helth: 200
   Armor: 5
-  CritDamage: 10
-  Damage: 2
+  CritDamage: 31
+  Damage: 35
   NomberLevel: 7
-  Money: 10
+  Money: 70

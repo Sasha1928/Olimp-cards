@@ -15,9 +15,9 @@ MonoBehaviour:
   _sprite: {fileID: 21300000, guid: 2622426c931bc76429916e2df84c31af, type: 3}
   ObjectName: Aid
   Prefab: {fileID: 5168412025217975750, guid: 05353ec95a3c9ec43ae54fa06c579340, type: 3}
-  Helth: 100
-  Armor: 5
-  CritDamage: 10
-  Damage: 2
+  Helth: 180
+  Armor: 17
+  CritDamage: 16
+  Damage: 35
   NomberLevel: 6
-  Money: 10
+  Money: 60
