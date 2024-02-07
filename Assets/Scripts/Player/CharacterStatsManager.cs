@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class CharacterStatsManager : MonoBehaviour
@@ -6,26 +5,23 @@ public class CharacterStatsManager : MonoBehaviour
     public static CharacterStatsManager _instance;
     public DataSave DataSave;
 
-        private void Awake()
+    private void Awake()
+    {
+        if (_instance == null)
         {
-            // Перевірка, чи вже існує екземпляр GameController
-            if (_instance == null)
-            {
-                // Якщо немає, то цей екземпляр GameController стає головним
-                _instance = this;
-                DontDestroyOnLoad(gameObject); // Не видаляти GameController при переході між сценами
-            }
-            else
-            {
-                // Якщо вже існує інший GameController, знищуємо цей
-                Destroy(gameObject);
-            }
-
-            if (MainMenu.Instance != null)
-            {
-            MainMenu.Instance.OnSceneLoaded += Instance_OnSceneLoaded;
-            }
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
         }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        if (MainMenu.Instance != null)
+        {
+            MainMenu.Instance.OnSceneLoaded += Instance_OnSceneLoaded;
+        }
+    }
 
     private void Instance_OnSceneLoaded()
     {
@@ -35,6 +31,11 @@ public class CharacterStatsManager : MonoBehaviour
     private void Start()
     {
         LoadData();
+    }
+
+    private void OnApplicationQuit()
+    {
+        SaveData();
     }
 
     private void SaveData()
@@ -54,7 +55,6 @@ public class CharacterStatsManager : MonoBehaviour
         }
         else
         {
-            // Якщо немає збережених даних, створюємо новий об'єкт гри
             DataSave = new DataSave();
         }
     }
