@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour
     public void GetDamage(int damage, int armor, int critDamage)
     {
         // Визначити кінцевий збиток, враховуючи захист
-        int finalDamage = Mathf.Max(0, damage - armor);
+        int finalDamage = Mathf.Max(0, Mathf.RoundToInt(damage * (1 - armor)));
 
         // Визначити, чи відбудеться критичний удар
         bool isCritHit = Random.Range(0, 100) < critDamage;
