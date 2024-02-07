@@ -35,8 +35,8 @@ public class Player : MonoBehaviour
     }
 
     public void GetDamage(int damage, int armor, int critDamage)
-    {// Визначаємо фактор захисту, де 1.0 представляє 100% захисту
-        float protectionFactor = Mathf.Clamp01(1f - armor / 100f); // Переведення захисту з відсотків у дробове число
+    { // Визначаємо фактор захисту, де 1.0 представляє 100% захисту
+        float protectionFactor = 1f - armor / 100f;
 
         // Розраховуємо кінцевий збиток, враховуючи захист
         int finalDamage = Mathf.Max(0, Mathf.RoundToInt(damage * protectionFactor));
