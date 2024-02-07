@@ -10,6 +10,7 @@ public class Fight : MonoBehaviour
     [SerializeField] private Player _player;
     [SerializeField] private Animator _theEndImage;
     [SerializeField] private TMP_Text _textViner;
+    [SerializeField] private AudioSource _fightSound;
 
     public event Action<int, int> SetHealth;
 
@@ -62,6 +63,7 @@ public class Fight : MonoBehaviour
             currentPlayerIndex = 1;
             _playerAnimator.SetTrigger("Block");
         }
+        _fightSound.Play();
         if (_coroutine)
             StartCoroutine(AnimatorDelay());
     }
