@@ -29,6 +29,11 @@ public class Player : MonoBehaviour
         return _playerObjectSO.PlyerObject;
     }
 
+    public int Health()
+    {
+        return _helth;
+    }
+
     public void GetDamage(int damage, int armor, int critDamage)
     {
         // Визначити кінцевий збиток, враховуючи захист

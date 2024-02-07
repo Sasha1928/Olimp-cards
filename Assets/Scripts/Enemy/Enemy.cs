@@ -28,6 +28,11 @@ public class Enemy : MonoBehaviour
         return _gameManagerSO.EnemyObject;
     }
 
+    public int Health()
+    {
+        return _helth;
+    }
+
     public void GetDamage(int damage, int armor, int critDamage)
     {
         // Визначити кінцевий збиток, враховуючи захист

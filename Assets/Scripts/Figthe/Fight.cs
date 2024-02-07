@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Fight : MonoBehaviour
 {
@@ -8,6 +10,8 @@ public class Fight : MonoBehaviour
     [SerializeField] private Player _player;
     [SerializeField] private Animator _theEndImage;
     [SerializeField] private TMP_Text _textViner;
+
+    public event Action<int, int> SetHealth;
 
     private int currentPlayerIndex;
     private Animator _playerAnimator;
@@ -45,6 +49,7 @@ public class Fight : MonoBehaviour
             _playerAnimator.SetTrigger("Attack");
             yield return new WaitForSeconds(0.17f);
             _enemy.GetDamage(_player.GetPlayerObjectSO().Damage, _player.GetPlayerObjectSO().Armor, _player.GetPlayerObjectSO().CritDamage);
+            SetHealth?.Invoke(_player.Health(), _enemy.Health());
             currentPlayerIndex = 0;
             _enemyAnimator.SetTrigger("Block");
         }
@@ -53,6 +58,7 @@ public class Fight : MonoBehaviour
             _enemyAnimator.SetTrigger("Attack");
             yield return new WaitForSeconds(0.17f);
             _player.GetDamage(_enemy.GetEnemyObjectSO().Damage, _enemy.GetEnemyObjectSO().Armor, _enemy.GetEnemyObjectSO().CritDamage);
+            SetHealth?.Invoke(_player.Health(), _enemy.Health());
             currentPlayerIndex = 1;
             _playerAnimator.SetTrigger("Block");
         }

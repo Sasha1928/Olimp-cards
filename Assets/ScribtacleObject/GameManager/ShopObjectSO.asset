@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ShopObjectSO
   m_EditorClassIdentifier: 
   Helth: 10
-  Armor: 2
-  CritDamage: 2
+  Armor: 5
+  CritDamage: 3
   Damage: 5

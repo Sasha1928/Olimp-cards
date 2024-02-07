@@ -15,9 +15,9 @@ MonoBehaviour:
   _sprite: {fileID: 21300000, guid: f891beb1bd4a57743bc21f7847a0e379, type: 3}
   ObjectName: Alexandro
   Prefab: {fileID: 5168412025217975750, guid: fdf5e2da7d08fcb40968b32b8a99f7db, type: 3}
-  Helth: 101
-  Armor: 90
-  CritDamage: 32
-  Damage: 85
+  Helth: 100
+  Armor: 10
+  CritDamage: 10
+  Damage: 10
   NomberLevel: 0
   Money: 0

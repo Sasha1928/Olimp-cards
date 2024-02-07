@@ -16,8 +16,8 @@ MonoBehaviour:
   ObjectName: Akanta
   Prefab: {fileID: 5168412025217975750, guid: fdf5e2da7d08fcb40968b32b8a99f7db, type: 3}
   Helth: 120
-  Armor: 7
-  CritDamage: 5
+  Armor: 0
+  CritDamage: 10
   Damage: 15
   NomberLevel: 0
-  Money: 20
+  Money: 0

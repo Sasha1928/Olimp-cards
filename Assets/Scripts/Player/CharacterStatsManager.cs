@@ -1,30 +1,34 @@
-using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CharacterStatsManager : MonoBehaviour
 {
-    public static CharacterStatsManager Instance { get; private set; }
-
+    public static CharacterStatsManager _instance;
     public DataSave DataSave;
 
-    private void Awake()
-    {
-        // Робимо перевірку на наявність іншої копії класу
-        if (Instance == null)
+        private void Awake()
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+            // Перевірка, чи вже існує екземпляр GameController
+            if (_instance == null)
+            {
+                // Якщо немає, то цей екземпляр GameController стає головним
+                _instance = this;
+                DontDestroyOnLoad(gameObject); // Не видаляти GameController при переході між сценами
+            }
+            else
+            {
+                // Якщо вже існує інший GameController, знищуємо цей
+                Destroy(gameObject);
+            }
+
+            if (MainMenu.Instance != null)
+            {
+            MainMenu.Instance.OnSceneLoaded += Instance_OnSceneLoaded;
+            }
         }
-        else
-        {
-            // Якщо вже є інша копія, то знищуємо поточний об'єкт
-            Destroy(gameObject);
-        }
-    }
-    
+
     private void Instance_OnSceneLoaded()
     {
-        MainMenu.Instance.OnSceneLoaded += Instance_OnSceneLoaded;
         SaveData();
     }
 
@@ -36,14 +40,13 @@ public class CharacterStatsManager : MonoBehaviour
     private void SaveData()
     {
         string json = JsonUtility.ToJson(DataSave);
-        PlayerPrefs.SetString(" DataSave", json);
+        PlayerPrefs.SetString("DataSave", json);
         PlayerPrefs.Save();
     }
 
     private void LoadData()
     {
-        string json = JsonUtility.ToJson(DataSave);
-        PlayerPrefs.SetString(" DataSave", "");
+        string json = PlayerPrefs.GetString("DataSave");
 
         if (!string.IsNullOrEmpty(json))
         {
@@ -54,7 +57,5 @@ public class CharacterStatsManager : MonoBehaviour
             // Якщо немає збережених даних, створюємо новий об'єкт гри
             DataSave = new DataSave();
         }
-
     }
-
 }
