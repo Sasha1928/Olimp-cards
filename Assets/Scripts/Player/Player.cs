@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] private GameManegerSO _playerObjectSO;
     [SerializeField] private Image _playerImage;
     [SerializeField] private TMP_Text _hp, _armor, _damage, _critDamage;
+    [SerializeField] private ParticleSystem _particleSystem;
 
     private int _helth;
 
@@ -46,6 +47,8 @@ public class Player : MonoBehaviour
 
         // Застосовуємо збиток
         _helth -= isCritHit ? finalDamage * 2 : finalDamage;
+
+        _particleSystem.Play();
 
         if ( _helth <= 0)
         {

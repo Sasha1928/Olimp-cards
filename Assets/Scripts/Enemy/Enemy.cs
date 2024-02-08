@@ -10,7 +10,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Image _image;
     [SerializeField] private GameManegerSO _gameManagerSO;
     [SerializeField] private TMP_Text _hp, _armor, _damage, _crit;
-
+    [SerializeField] private ParticleSystem _particleSystem;
+ 
     private int _helth;
 
     private void Awake()
@@ -46,6 +47,8 @@ public class Enemy : MonoBehaviour
 
         // Застосовуємо збиток
         _helth -= isCritHit ? finalDamage * 2 : finalDamage;
+
+        _particleSystem.Play();
 
         if (_helth <= 0)
         {

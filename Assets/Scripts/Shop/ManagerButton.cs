@@ -10,16 +10,17 @@ public class ManagerButton : MonoBehaviour
     [SerializeField] private Button[] _buttonsList;
     [SerializeField] private TMP_Text[] _buyTexts;
     [SerializeField] private TMP_Text[] _levelUpTexts;
+    [SerializeField] private ParticleSystem[] _particleSistem;
     [SerializeField] private TMP_Text _shopMoney;
 
     private AllocationlStats _stats;
 
     private void Awake()
     {
-        _buttonsList[0].onClick.AddListener(() => LevelUp(ref _playerObjectSO.PlyerObject.Helth, _shopObjectSO.Helth, ref _buyTexts[0], ref _levelUpTexts[0]));
-        _buttonsList[1].onClick.AddListener(() => LevelUp(ref _playerObjectSO.PlyerObject.Damage, _shopObjectSO.Damage, ref _buyTexts[1], ref _levelUpTexts[1]));
-        _buttonsList[2].onClick.AddListener(() => LevelUp(ref _playerObjectSO.PlyerObject.CritDamage, _shopObjectSO.CritDamage, ref _buyTexts[2], ref _levelUpTexts[2]));
-        _buttonsList[3].onClick.AddListener(() => LevelUp(ref _playerObjectSO.PlyerObject.Armor, _shopObjectSO.Armor, ref _buyTexts[3], ref _levelUpTexts[3]));
+        _buttonsList[0].onClick.AddListener(() => LevelUp(ref _playerObjectSO.PlyerObject.Helth, _shopObjectSO.Helth, ref _buyTexts[0], ref _levelUpTexts[0], _particleSistem[0]));
+        _buttonsList[1].onClick.AddListener(() => LevelUp(ref _playerObjectSO.PlyerObject.Damage, _shopObjectSO.Damage, ref _buyTexts[1], ref _levelUpTexts[1], _particleSistem[1]));
+        _buttonsList[2].onClick.AddListener(() => LevelUp(ref _playerObjectSO.PlyerObject.CritDamage, _shopObjectSO.CritDamage, ref _buyTexts[2], ref _levelUpTexts[2], _particleSistem[2]));
+        _buttonsList[3].onClick.AddListener(() => LevelUp(ref _playerObjectSO.PlyerObject.Armor, _shopObjectSO.Armor, ref _buyTexts[3], ref _levelUpTexts[3], _particleSistem[3]));
 
         _shopMoney.text = _playerObjectSO.PlyerObject.Money.ToString();
         _stats = GetComponent<AllocationlStats>();
@@ -30,7 +31,7 @@ public class ManagerButton : MonoBehaviour
         SetParametersShop();
     }
 
-    private void LevelUp(ref int getValue, int setValue, ref TMP_Text texts, ref TMP_Text textLevelUp)
+    private void LevelUp(ref int getValue, int setValue, ref TMP_Text texts, ref TMP_Text textLevelUp, ParticleSystem partile)
     {
 
         if (GetMoney(int.Parse(texts.text), ref _playerObjectSO.PlyerObject.Money))
@@ -41,6 +42,8 @@ public class ManagerButton : MonoBehaviour
             LevelUpText(ref textLevelUp);
             SaveParametersShop(texts, textLevelUp);
             _stats.Allocation();
+
+            partile.Play();
         }
     }
 
